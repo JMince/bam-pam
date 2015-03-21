@@ -6,7 +6,7 @@ describe User do
       it "returns all associated clubs" do
         club = Club.create!(name: "Ultimate Frisbee")
         user = create_user
-        Membership.create!(club_id: doctor.id, user_id: user.id)
+        Membership.create!(club_id: club.id, user_id: user.id)
 
         expect(user.clubs).to eq [club]
       end
