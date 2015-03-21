@@ -1,7 +1,7 @@
 require "rails_helper"
 
 feature "user memberships" do
-  scenario "can be created by selecting a doctor and date" do
+  scenario "can be created by selecting a club" do
     Club.create!(name: "Boardgames")
     Club.create!(name: "Chinese Conversation")
     user = create_user(name: "star_student", password: "password")

@@ -8,7 +8,7 @@ describe Club do
 
   it "is invalid without a name" do
     club = Club.create!(name: nil)
-    contact.valid?
-    expect(contact.errors[:name]).to eq("can't be blank")
+    club.valid?
+    expect(club.errors[:name]).to eq("can't be blank")
   end
 end
