@@ -12,8 +12,8 @@ describe User do
       end
     end
 
-    describe "#clubs" do
-      it "returns all associated clubs" do
+    describe "#memberships" do
+      it "returns all associated memberships" do
         user = create_user
         club = Club.create!(name: "Ultimate Frisbee")
         membership = Membership.create!(club_id: club.id, user_id: user.id)
