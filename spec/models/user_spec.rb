@@ -22,4 +22,17 @@ describe User do
       end
     end
   end
+
+  describe "validations" do
+    it "is valid with a name" do
+      user = User.new(name: "Bobby", password: "password")
+      expect(user).to be_valid
+    end
+
+    it "is invalid without a name" do
+      user = User.new(name: nil, password: "password")
+      user.valid?
+      expect(user.errors[:name]).to eq(["can't be blank"])
+    end
+  end
 end

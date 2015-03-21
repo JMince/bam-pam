@@ -18,7 +18,7 @@ feature "user memberships" do
     select("Chinese Conversation", from: "Clubs")
 
     click_on "Join Club"
-    expect(current_path).to eq user_memberships_path
+    expect(current_path).to eq root_path
 
     expect(page).to have_content "You've joined the Chinese Conversation club!"
     expect(page).to have_content "You belong to: 1 club"
@@ -28,7 +28,7 @@ feature "user memberships" do
     select("Boardgames", from: "Clubs")
 
     click_on "Join Club"
-    expect(current_path).to eq user_memberships_path
+    expect(current_path).to eq root_path
 
     expect(page).to have_content "You've joined the Boardgames club!"
     expect(page).to have_content "You belong to: 2 clubs"
